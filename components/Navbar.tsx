@@ -10,22 +10,36 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
-  const toggleDarkMode = () => {
-    setIsDark(!isDark);
-  };
 
   useEffect(() => {
-    if (isDark) {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark') {
+      setIsDark(true);
       document.documentElement.classList.add('dark');
     } else {
+      setIsDark(false);
       document.documentElement.classList.remove('dark');
     }
-  }, [isDark]);
+  }, []);
+
+  const toggleDarkMode = () => {
+    const newMode = !isDark;
+    setIsDark(newMode);
+    if (newMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
+
 
   return (
     <nav className=" bg-green-100 dark:bg-black dark:text-white flex-between max-container padding-container w-full top-0 sticky z-30 py-3">
       <Link href="/">
-        <Image src="/hilink-logo.svg" alt='logo' width={74} height={29} />
+        <Image src="/logo.svg" alt='logo' width={85} height={40} />
       </Link>
 
       <div className="flex-center gap-4 lg:hidden ">
@@ -60,8 +74,8 @@ const Navbar = () => {
           
           {NAV_LINKS.map((link) => (
 
-            <li className="text-2xl lg:text-[14px] pb-3 lg:pb-0 text-white lg:px-2  lg:border-b-0 ">
-              <Link  key={link.slug}
+            <li key={link.slug} className="text-2xl lg:text-[14px] pb-3 lg:pb-0 text-white lg:px-2  lg:border-b-0 ">
+              <Link  
               href={link.href}
                 className='regular-16 text-gray-50 dark:text-white flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold hover:text-green-50'
                 onClick={() => setNavbar(!navbar)}
