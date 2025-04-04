@@ -13,7 +13,7 @@ const Feature = () => {
                         alt='phone'
                         width={440}
                         height={1000}
-                        className='feature-phone filter-none!'
+                        className='feature-phone invert dark-no-color-change'
                     />
                 </div>
                 <div className="z-20 flex w-full flex-col lg:w-[60%]">
