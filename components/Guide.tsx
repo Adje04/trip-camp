@@ -6,9 +6,9 @@ const Guide = () => {
         <section className="flex-center flex-col">
             <div className="padding-container max-container w-full pb-24">
                 <Image src="/camp.svg" alt='camp' width={50} height={50} />
-                <p className='uppercase regular-18 mt-1 mb-3 text-green-50'> Nous sommes la pour vous</p>
+                <p className='uppercase regular-18 mt-1 mb-3 text-green-50'> Nous sommes là pour vous</p>
                 <div className='flex flex-wrap justify-between gap-5 lg:gap-10'>
-                    <h2 className='bold-32 lg:bold-52 xl:max-w[390px] dark:text-gray-200'>Votre  Guide sur</h2>
+                    <h2 className='bold-32 lg:bold-52 xl:max-w[390px] dark:text-gray-200'>Votre  Guide sûr</h2>
                     <p className='regular-16 text-gray-30 lg:max-w-[520px]'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sint earum, totam nemo odio magni nesciunt et ullam sit beatae excepturi labore magnam reiciendis iste, eum atque accusantium quod inventore.
 
