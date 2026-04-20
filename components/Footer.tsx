@@ -4,6 +4,7 @@ import React, { ReactNode } from 'react'
 import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '@/constants'
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <footer className="flex-center mt-10">
       <div className=" bg-green-100 dark:bg-black padding-container max-container flex w-full flex-col gap-14 ">
@@ -44,7 +45,7 @@ const Footer = () => {
                   {SOCIALS.links.map((link) => (
                     <li key={link.id}> 
                       <Link href="/">
-                        <Image src={link.social_link} alt="logo" width={24} height={24} className="dark:invert dark:hover:bg-green-50" />
+                        <Image src={link.social_link} alt="logo" width={24} height={24} className=" dark:hover:bg-green-50" />
                       </Link>
                     </li>
                   ))}
@@ -55,7 +56,7 @@ const Footer = () => {
         </div>
 
         <div className="border bg-gray-20 dark:bg-gray-30" />
-        <p className="regular-14 w-full text-center dark:text-gray-30 hover:text-green-50">2025 HiCamp | Tous droits réservés</p>
+        <p className="regular-14 w-full text-center dark:text-gray-30 hover:text-green-50">{year} HiCamp Tous droits réservés</p>
       </div>
     </footer>
   )

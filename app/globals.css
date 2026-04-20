@@ -1,38 +1,28 @@
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
-
+@import 'tailwindcss';
 
 @source 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
 
-
-
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Inter;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --breakpoint-xs: 400px;
   --breakpoint-3xl: 1680px;
   --breakpoint-4xl: 2200px;
 
-  --color-green-50: #30AF5B;
-  --color-green-90: #292C27;
+  --color-green-50: #30af5b;
+  --color-green-90: #292c27;
 
-  --color-gray-10: #EEEEEE;
-  --color-gray-20: #A2A2A2;
-  --color-gray-30: #7B7B7B;
+  --color-gray-10: #eeeeee;
+  --color-gray-20: #a2a2a2;
+  --color-gray-30: #7b7b7b;
   --color-gray-50: #585858;
   --color-gray-90: #141414;
 
-  --color-orange-50: #FF814C;
+  --color-orange-50: #ff814c;
 
   --color-blue-70: #021639;
 
-  --color-yellow-50: #FEC601;
+  --color-yellow-50: #fec601;
 
   --radius-5xl: 40px;
 
@@ -41,33 +31,30 @@ body {
   --bg-img-1: url('/img-1.png');
   --bg-img-2: url('/img-2.png');
   --feature-bg: url('/feature-bg.png');
-
 }
 
 @utility btn_white {
-  @apply border-white bg-white px-8 py-3 text-green-50
+  @apply border-white bg-white px-8 py-3 text-green-50;
 }
 
 @utility btn_white_text {
-  @apply border-white bg-white px-8 py-3 text-gray-90
+  @apply border-white bg-white px-8 py-3 text-gray-90;
 }
 
 @utility btn_green {
-  @apply border-green-50 bg-green-50 px-8 py-5 text-white
+  @apply border-green-50 bg-green-50 px-8 py-5 text-white;
 }
 @utility btn_green_2 {
-  @apply bg-green-50 px-8 py-4 text-white transition-all hover:bg-black
+  @apply bg-green-50 px-8 py-4 text-white transition-all hover:bg-black;
 }
 
 @utility btn_dark_green {
-  @apply bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
+  @apply bg-green-90 px-8 py-4 text-white transition-all hover:bg-black;
 }
 
 @utility btn_dark_green_outline {
-  @apply  border-gray-10 bg-green-90 px-8 py-4 text-white hover:bg-orange-50
-}
-@utility btn_dark_green_outline {
-  @apply border border-gray-10 bg-green-90 px-8 py-4 text-white hover:bg-green-50
+  @apply border-gray-10 bg-green-90 px-8 py-4 text-white hover:bg-orange-50;
+  @apply border border-gray-10 bg-green-90 px-8 py-4 text-white hover:bg-green-50;
 }
 
 @utility max-container {
@@ -99,71 +86,71 @@ body {
 
 /* FONTS */
 @utility regular-64 {
-  @apply text-[64px] font-[400] leading-[120%];
+  @apply text-[64px] font-normal leading-[120%];
 }
 
 @utility regular-40 {
-  @apply text-[40px] font-[400] leading-[120%];
+  @apply text-[40px] font-normal leading-[120%];
 }
 
 @utility regular-32 {
-  @apply text-[32px] font-[400];
+  @apply text-[32px] font-normal;
 }
 
 @utility regular-24 {
-  @apply text-[24px] font-[400];
+  @apply text-[24px] font-normal;
 }
 
 @utility regular-20 {
-  @apply text-[20px] font-[400];
+  @apply text-[20px] font-normal;
 }
 
 @utility regular-18 {
-  @apply text-[18px] font-[400];
+  @apply text-[18px] font-normal;
 }
 
 @utility regular-16 {
-  @apply text-[16px] font-[400];
+  @apply text-[16px] font-normal;
 }
 
 @utility regular-14 {
-  @apply text-[14px] font-[400];
+  @apply text-[14px] font-normal;
 }
 
 @utility medium-14 {
-  @apply text-[14px] font-[600];
+  @apply text-[14px] font-semibold;
 }
 
 @utility bold-88 {
-  @apply text-[88px] font-[600] leading-[120%];
+  @apply text-[88px] font-semibold leading-[120%];
 }
 
 @utility bold-64 {
-  @apply text-[64px] font-[600] leading-[120%];
+  @apply text-[64px] font-semibold leading-[120%];
 }
 
 @utility bold-52 {
-  @apply text-[52px] font-[600] leading-[120%];
+  @apply text-[52px] font-semibold leading-[120%];
 }
 
 @utility bold-40 {
-  @apply text-[40px] font-[600] leading-[120%];
+  @apply text-[40px] font-semibold leading-[120%];
 }
 
 @utility bold-32 {
-  @apply text-[32px] font-[500] leading-[120%];
+  @apply text-[32px] font-medium leading-[120%];
 }
 
 @utility bold-20 {
-  @apply text-[20px] font-[500];
+  @apply text-[20px] font-medium;
 }
 
 @utility bold-18 {
-  @apply text-[18px] font-[500];
+  @apply text-[18px] font-medium;
 }
 
 @utility bold-16 {
-  @apply text-[16px] font-[700];
+  @apply text-[16px] font-bold;
 }
 
 /* Hero */
@@ -178,11 +165,11 @@ body {
 
 /* Feature */
 @utility feature-bg {
-  @apply  bg-[url(/feature-bg.png)] dark:invert;
+  @apply bg-[url(/feature-bg.png)] dark:invert;
 }
 
 @utility feature-phone {
-  @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex 3xl:left-20;
+  @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-15 md:-left-16 lg:flex 3xl:left-20;
 }
 
 /* Get App */
@@ -191,6 +178,13 @@ body {
 }
 @utility dark-no-color-change {
   @apply dark:invert mix-blend-difference dark:mix-blend-normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
 }
 
 
